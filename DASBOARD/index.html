@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Dustbin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#000000">
+</head>
+
+<body>
+  <div class="container">
+    <h1>🗑 Smart Dustbin</h1>
+
+    <div class="circle">
+      <div class="fill" id="fill"></div>
+      <div class="inside" id="fullness">0%</div>
+    </div>
+
+    <div id="status">🟢 OK</div>
+
+    <div class="buttons">
+      <button id="openBtn">OPEN</button>
+      <button id="closeBtn">CLOSE</button>
+    </div>
+  </div>
+
+  <script type="module" src="app_V2.js"></script>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/sw.js");
+    }
+  </script>
+</body>
+</html>
